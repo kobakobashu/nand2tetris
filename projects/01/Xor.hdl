@@ -14,4 +14,8 @@ CHIP Xor {
 
     PARTS:
     // Put your code here:
+    Nand(a=a, b=b, out=nandab);
+    Nand(a=a, b=nandab, out=c);
+    Nand(a=b, b=nandab, out=d);
+    Nand(a=c, b=d, out=out);
 }
